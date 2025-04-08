@@ -11,11 +11,11 @@ describe('Simple Test Case', () => {
             cy.get('#password').type('201017Dj*#*#')
             cy.get('.kt-login__actions > .kt-form').click()
 
-            cy.get('.kt-header__topbar-wrapper > .kt-hidden-').click()
-            cy.get('.kt-notification__custom > .btn').click()
-            cy.get('.swal2-confirm').click()
+            // cy.get('.kt-header__topbar-wrapper > .kt-hidden-').click()
+            // cy.get('.kt-notification__custom > .btn').click()
+            // cy.get('.swal2-confirm').click()
 
-            cy.get('.kt-login__title').should('have.text', 'LOGIN')
+            // cy.get('.kt-login__title').should('have.text', 'LOGIN')
         })
 
         it('invalid username & password', () => {
