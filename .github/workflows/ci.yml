@@ -10,4 +10,4 @@ jobs:
             - name: Cypress run
               uses: cypress-io/github-action@v6
               with:
-                  project: cypress/e2e/simple/simple.cy.js
+                  project: cypress/e2e/simple/
