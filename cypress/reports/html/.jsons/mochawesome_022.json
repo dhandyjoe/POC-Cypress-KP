@@ -1,0 +1,245 @@
+{
+  "stats": {
+    "suites": 4,
+    "tests": 5,
+    "passes": 4,
+    "pending": 0,
+    "failures": 1,
+    "start": "2025-04-13T04:50:32.765Z",
+    "end": "2025-04-13T04:51:25.163Z",
+    "duration": 52398,
+    "testsRegistered": 5,
+    "passPercent": 80,
+    "pendingPercent": 0,
+    "other": 1,
+    "hasOther": true,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "ad5c2560-1eeb-4607-8a8c-d23d71e54d44",
+      "title": "",
+      "fullFile": "cypress/e2e/complex/complex.cy.js",
+      "file": "cypress/e2e/complex/complex.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "d6859318-ddeb-413c-bb81-b6fc07736e9e",
+          "title": "Complex Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "c845e190-aae6-42a0-9a6f-55106976ce04",
+              "title": "Manajemen Prospek",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "data not found",
+                  "fullTitle": "Complex Test Case Manajemen Prospek data not found",
+                  "timedOut": null,
+                  "duration": 13179,
+                  "state": "passed",
+                  "speed": "slow",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.kt-menu-id_90 > .kt-menu__toggle').click();\ncy.get('.kt-menu-id_94 > .kt-menu__link').click();\ncy.get('.kt-portlet__head-title').should('be.visible');\n// .should('have.text', 'Manajemen Prospek')\ncy.get('#period').click();\nfunction checkBulan() {\n  cy.get('.left > .calendar-table > .table-condensed > thead > :nth-child(1) > .month').invoke('text').then(value => {\n    if (value === 'Feb 2025') {\n      cy.get('.left > .calendar-table > .table-condensed > tbody > :nth-child(1) > [data-title=\"r0c6\"]').dblclick();\n      cy.get('.applyBtn').click();\n    } else {\n      cy.get('.prev').click();\n      checkBulan();\n    }\n  });\n}\ncheckBulan();\ncy.get('#filter').click();\ncy.get('.dt-empty').should('be.visible').should('have.text', 'No data available in table');",
+                  "err": {},
+                  "uuid": "4d52e68d-ff10-4f52-8823-c74393b74c88",
+                  "parentUUID": "c845e190-aae6-42a0-9a6f-55106976ce04",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "valid",
+                  "fullTitle": "Complex Test Case Manajemen Prospek valid",
+                  "timedOut": null,
+                  "duration": 5989,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.kt-menu-id_90 > .kt-menu__toggle').click();\ncy.get('.kt-menu-id_94 > .kt-menu__link').click();\ncy.get('.kt-portlet__head-title').should('be.visible');\n// .should('have.text', 'Manajemen Prospek')\ncy.get('#period').click();\nfunction checkBulan() {\n  cy.get('.left > .calendar-table > .table-condensed > thead > :nth-child(1) > .month').invoke('text').then(value => {\n    if (value === 'Feb 2025') {\n      cy.get('.left > .calendar-table > .table-condensed > tbody > :nth-child(1) > [data-title=\"r0c6\"]').click();\n      cy.get('.left > .calendar-table > .table-condensed > tbody > :nth-child(5) > [data-title=\"r4c5\"]').click();\n      cy.get('.applyBtn').click();\n    } else {\n      cy.get('.prev').click();\n      checkBulan();\n    }\n  });\n}\ncheckBulan();\ncy.get('#filter').click();\ncy.get('#table-data-table_wrapper').should('be.visible');\ncy.get('.dt-scroll-headInner > .table').should('be.visible');\ncy.get('tbody tr').should('not.be.empty');\ncy.get(':nth-child(1) > .btn-option > .justify-content-start > .btn').click();\ncy.get('.kt-subheader__title').should('be.visible').and('have.text', 'Data Prospek');\ncy.get('.kt-subheader__desc').should('be.visible').and('have.text', 'Detail');\ncy.get('.nav li').should('have.length', 3);\n// Data Dealer\ncy.get('#data-dealer > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Data Dealer');\n});\ncy.get('#data-dealer > .kt-portlet__body > :nth-child(1) > :nth-child(3) > .row > :nth-child(2) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('VISIT FINISHED');\n});\ncy.get(':nth-child(5) > .row > :nth-child(4) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('DEALER PROSPEK');\n});\ncy.get(':nth-child(6) > :nth-child(2) > :nth-child(2) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('081255807890');\n});\n// Data Stock Financing\ncy.get(':nth-child(2) > .nav-link').click();\ncy.get('#data-stock-financing > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Data Stock Financing');\n});\ncy.get('#data-stock-financing > .kt-portlet__body > :nth-child(1) > :nth-child(2) > .row > :nth-child(1) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Jumlah Stock Unit Saat Kunjungan');\n});\ncy.get('#data-stock-financing > .kt-portlet__body > :nth-child(1) > :nth-child(3) > .row > :nth-child(1) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Stock Unit Terjual Bulan Ini');\n});\ncy.get(':nth-child(2) > .row > :nth-child(3) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Restock Bulan Ini');\n});\ncy.get(':nth-child(3) > .row > :nth-child(3) > .col-11').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Memiliki Pembiayaan Dari Multi Finance Lain');\n});\ncy.get('tbody tr').should('not.be.empty');\n// Dokumen Pendukung\ncy.get(':nth-child(3) > .nav-link').click();\ncy.get('#data-document > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Data Dokumen Pendukung');\n});\ncy.get('#data-document > .kt-portlet__body > :nth-child(1) > .col-12 > b').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Foto Kunjungan');\n});\ncy.get(':nth-child(2) > .col-12 > b').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Foto Tambahan');\n});\n// cy.get(':nth-child(2) > .card > #photo_visit > .card-img-top').click()\n// cy.get('#modalImageAddress > .modal-dialog > .modal-content').should('be.visible')\n// cy.get('#modal-title-v2')\n//     .invoke('text')\n//     .should((data) => {\n//         expect(data.trim()).to.eq('Foto Dealer')\n//     })\n// cy.get('#modalImageAddress > .modal-dialog > .modal-content').should('be.visible')\n// cy.get('#visit-img').should('be.visible')\n// cy.get('.ml-2').should('be.visible')\n// cy.get('#modalImageAddress').click(50, 50);\n// cy.wait(3000); // Waits for 3 seconds",
+                  "err": {},
+                  "uuid": "fc49fdba-42d6-4e62-9696-9b394712abe1",
+                  "parentUUID": "c845e190-aae6-42a0-9a6f-55106976ce04",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "4d52e68d-ff10-4f52-8823-c74393b74c88",
+                "fc49fdba-42d6-4e62-9696-9b394712abe1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 19168,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "72d42386-7070-4c1f-9c8d-24025dc5e532",
+              "title": "Master Kunjungan Dealer",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "Edit & Detail",
+                  "fullTitle": "Complex Test Case Master Kunjungan Dealer Edit & Detail",
+                  "timedOut": null,
+                  "duration": 7219,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Main Page\ncy.get('.kt-menu-id_90 > .kt-menu__toggle').click();\ncy.get('.kt-menu-id_97 > .kt-menu__link').click();\ncy.get('.kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Master Kunjungan Dealer');\n});\ncy.get('.dt-scroll-body tbody tr').should('have.length', 2);\n// Edit \ncy.get(':nth-child(1) > .btn-option > .justify-content-start > .btn-warning').click();\ncy.get('.kt-subheader__title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('MO');\n});\ncy.get('.kt-subheader__desc').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Edit');\n});\ncy.get(':nth-child(1) > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Penalti');\n});\ncy.get(':nth-child(2) > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Target Aktivitas Kunjungan / Bulan');\n});\ncy.get('#input-1').clear().type(50);\ncy.get('#input-2').clear().type(50);\ncy.get('#input-3').clear().type(50);\ncy.get('#input-allBranch').clear().type(50);\ncy.get('#btn-simpan').click();\ncy.get('.swal2-popup').should('be.visible');\ncy.get('.swal2-confirm').click();\ncy.get('.swal2-confirm').should('be.visible');\ncy.get('.swal2-confirm').click();\n// Detail\ncy.get(':nth-child(1) > .btn-option > .justify-content-start > .btn-primary').click();\ncy.get('.kt-subheader__title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('MO');\n});\ncy.get('.kt-subheader__desc').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Detail');\n});\ncy.get('#box-penalty').should('be.visible');\ncy.get('#box-target').should('be.visible');\ncy.get('#box-penalty > .table-responsive > .table > tbody > :nth-child(1) > :nth-child(2)').invoke('text').should(data => {\n  expect(data.trim()).to.eq('50%');\n});\ncy.get('#box-penalty > .table-responsive > .table > tbody > :nth-child(2) > :nth-child(2)').invoke('text').should(data => {\n  expect(data.trim()).to.eq('50%');\n});\ncy.get('tbody > :nth-child(3) > :nth-child(2)').invoke('text').should(data => {\n  expect(data.trim()).to.eq('50%');\n});\ncy.get('tbody > :nth-child(1) > :nth-child(3)').invoke('text').should(data => {\n  expect(data.trim()).to.eq('50');\n});\ncy.get('.pt-4 > .btn').click();",
+                  "err": {},
+                  "uuid": "8654f464-24d6-4532-95da-f4baf05f7af1",
+                  "parentUUID": "72d42386-7070-4c1f-9c8d-24025dc5e532",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "8654f464-24d6-4532-95da-f4baf05f7af1"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 7219,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            },
+            {
+              "uuid": "b12739bb-bee9-4205-bf3a-74a4eaefa5b0",
+              "title": "Manajemen Kunjungan Dealer",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "data not found",
+                  "fullTitle": "Complex Test Case Manajemen Kunjungan Dealer data not found",
+                  "timedOut": null,
+                  "duration": 4703,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "// Main Page\ncy.get('.kt-menu-id_90 > .kt-menu__toggle').click();\ncy.get('.kt-menu-id_95 > .kt-menu__link').click();\ncy.get('.kt-portlet__head-title');\ncy.get('.card-body').should('be.visible');\ncy.get('#table-data-table_wrapper').should('be.visible');\ncy.get('#select2-branch-container').click();\ncy.get('.select2-search__field').clear().type('TUTUP');\ncy.get('#select2-branch-results > li:first').click();\ncy.get('#filter').click();\ncy.get('.dt-empty').should('be.visible');",
+                  "err": {},
+                  "uuid": "68e8fecb-2be0-4c2b-a93b-b7de4be98186",
+                  "parentUUID": "b12739bb-bee9-4205-bf3a-74a4eaefa5b0",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "Create and validate",
+                  "fullTitle": "Complex Test Case Manajemen Kunjungan Dealer Create and validate",
+                  "timedOut": null,
+                  "duration": 4207,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/complex/complex.cy.js/Complex Test Case -- Manajemen Kunjungan Dealer -- Create and validate (failed).png\",\n      \"/complex/complex.cy.js/Complex Test Case -- Create and validate -- after each hook (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('.kt-menu-id_90 > .kt-menu__toggle').click();\ncy.get('.kt-menu-id_95 > .kt-menu__link').click();\n// Form Kunjungan Dealer\ncy.get('.kt-portlet__head > :nth-child(2) > .btn').click();\ncy.get('.kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Form Penugasan Kunjungan Dealer');\n});\ncy.get('#select2-dealer_name-container').click();\ncy.get('.select2-search__field').clear().type('3 DARA MOTOR');\ncy.wait(3000);\ncy.get('#select2-dealer_name-results li:first').click();\ncy.get('#pic-mssg').should('be.visible');\ncy.get('#task_date-mssg').should('be.visible');\ncy.get('#visit_count-mssg').should('be.visible');\ncy.get('#select2-pic-container').click();\ncy.get('.select2-search__field').clear().type('ADAM C SIHITE');\ncy.wait(3000);\ncy.get('#select2-pic-results li:first').click();\ncy.get('#task_date').click();\ncy.get('.applyBtn').click();\ncy.get('#visit_count').clear().type(10);\ncy.get('#desc').clear().type('automation-test');\ncy.go('back');\n// Main page\ncy.get('.kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Kunjungan Dealer');\n});\ncy.get('.card-body').should('be.visible');\ncy.get('#table-data-table_wrapper').should('be.visible');\n// cy.get('#select2-dealer_name-container').click()\n// cy.get('.select2-search__field').clear().type('3 DARA MOTOR')\n// cy.wait(3000)\n// cy.get('#select2-dealer_name-results li').eq(1).click()\n// cy.get('#select2-nama_pic-container').click()\n// cy.get('.select2-search__field').clear().type('ADAM C SIHITE')\n// cy.wait(3000)\n// cy.get('#select2-nama_pic-results li:first').eq(1).click()\n// cy.get('#filter').click()\n// cy.get('tbody > :nth-child(1) > :nth-child(2)')\n//     .invoke('text')\n//     .should((data) => {\n//         expect(data.trim()).to.eq('3 DARA MOTOR')\n//     })\n// cy.get('tbody > :nth-child(1) > :nth-child(4)')\n//     .invoke('text')\n//     .should((data) => {\n//         expect(data.trim()).to.eq('ADAM C SIHITE')\n//     })\n// cy.get(':nth-child(1) > .btn-option > .justify-content-start > .btn').click()\ncy.get('#period').click();\nfunction checkBulan() {\n  cy.get('.left > .calendar-table > .table-condensed > thead > :nth-child(1) > .month').invoke('text').then(value => {\n    if (value === 'Feb 2025') {\n      cy.get('.left > .calendar-table > .table-condensed > tbody > :nth-child(1) > [data-title=\"r0c6\"]').click();\n      cy.get('.left > .calendar-table > .table-condensed > tbody > :nth-child(5) > [data-title=\"r4c5\"]').click();\n      cy.get('.applyBtn').click();\n    } else {\n      cy.get('.prev').click();\n      checkBulan();\n    }\n  });\n}\ncheckBulan();\ncy.get('#filter').click();\ncy.get(':nth-child(1) > .btn-option > .justify-content-start > .btn').click();\n// Detail Page\ncy.get('#data-dealer > .kt-portlet__head > .kt-portlet__head-label > .kt-portlet__head-title').invoke('text').should(data => {\n  expect(data.trim()).to.eq('Data Dealer');\n});\ncy.get('#data-dealer > .kt-portlet__body > :nth-child(1)').should('be.visible');\ncy.get('#data-dealer > .kt-portlet__body > :nth-child(1) > :nth-child(2) > .row > :nth-child(2) > .col-11').should('be.visible');\ncy.get('#data-dealer > .kt-portlet__body > :nth-child(1) > :nth-child(3) > .row > :nth-child(2) > .col-11').should('be.visible');\ncy.get(':nth-child(5) > .row > :nth-child(2) > .col-11').should('be.visible');\ncy.get(':nth-child(6) > .row > :nth-child(2) > .col-11').should('be.visible');\ncy.get(':nth-child(5) > .row > :nth-child(4) > .col-11').should('be.visible');",
+                  "err": {
+                    "message": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<img class=\"kt-hidden-\" alt=\"Pic\" src=\"assets/media/users/default.jpg\">`\n\nis being covered by another element:\n\n`<div class=\"swal2-container swal2-center swal2-shown\" style=\"overflow-y: auto;\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Complex Test Case`",
+                    "estack": "CypressError: Timed out retrying after 4050ms: `cy.click()` failed because this element:\n\n`<img class=\"kt-hidden-\" alt=\"Pic\" src=\"assets/media/users/default.jpg\">`\n\nis being covered by another element:\n\n`<div class=\"swal2-container swal2-center swal2-shown\" style=\"overflow-y: auto;\">...</div>`\n\nFix this problem, or use {force: true} to disable error checking.\n\nhttps://on.cypress.io/element-cannot-be-interacted-with\n\nBecause this error occurred during a `after each` hook we are skipping the remaining tests in the current suite: `Complex Test Case`\n    at ensureIsDescendent (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112042:68)\n    at ensureDescendents (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112093:5)\n    at ensureDescendentsAndScroll (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112099:14)\n    at ensureElIsNotCovered (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112230:5)\n    at runAllChecks (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112429:52)\n    at retryActionability (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:112466:16)\n    at tryCatcher (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise.attempt.Promise.try (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:4285:29)\n    at whenStable (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:144517:68)\n    at <unknown> (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:144458:14)\n    at tryCatcher (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1777:23)\n    at Promise._settlePromiseFromHandler (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1489:31)\n    at Promise._settlePromise (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1546:18)\n    at Promise._settlePromise0 (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1591:10)\n    at Promise._settlePromises (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1671:18)\n    at Promise._fulfill (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:1615:18)\n    at <unknown> (https://staging-sally.kbfinansia.com/__cypress/runner/cypress_runner.js:5420:46)",
+                    "diff": null
+                  },
+                  "uuid": "35438791-173f-4006-988c-b4a90b7cae80",
+                  "parentUUID": "b12739bb-bee9-4205-bf3a-74a4eaefa5b0",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "68e8fecb-2be0-4c2b-a93b-b7de4be98186"
+              ],
+              "failures": [
+                "35438791-173f-4006-988c-b4a90b7cae80"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 8910,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

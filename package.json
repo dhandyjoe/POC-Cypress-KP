@@ -1,23 +1,24 @@
 {
-  "name": "poc-cypress-web",
-  "version": "1.0.0",
-  "description": "test-poc-cypress-kp",
-  "main": "cypress.config.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/dhandyjoe/POC-Cypress-KP.git"
-  },
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dhandyjoe/POC-Cypress-KP/issues"
-  },
-  "homepage": "https://github.com/dhandyjoe/POC-Cypress-KP#readme",
-  "dependencies": {
-    "cypress": "^14.2.0",
-    "cypress-mochawesome-reporter": "^3.8.2"
-  }
+	"name": "poc-cypress-web",
+	"version": "1.0.0",
+	"description": "test-poc-cypress-kp",
+	"main": "cypress.config.js",
+	"scripts": {
+		"test": "echo \"Error: no test specified\" && exit 1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/dhandyjoe/POC-Cypress-KP.git"
+	},
+	"author": "",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dhandyjoe/POC-Cypress-KP/issues"
+	},
+	"homepage": "https://github.com/dhandyjoe/POC-Cypress-KP#readme",
+	"dependencies": {
+		"cypress": "^14.2.0",
+		"cypress-aiotests-reporter": "^1.5.0",
+		"cypress-mochawesome-reporter": "^3.8.2"
+	}
 }

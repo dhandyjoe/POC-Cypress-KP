@@ -1,0 +1,16 @@
+{
+	"validData": {
+		"username": "dhandyjoenathan",
+		"password": "201017Dj*#*#"
+	},
+	"invalidData": [
+		{
+			"username": "qweqwe",
+			"password": "qweqwe"
+		},
+		{
+			"username": "abcdef",
+			"password": "abcdef"
+		}
+	]
+}

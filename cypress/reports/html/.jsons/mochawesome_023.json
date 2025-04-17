@@ -1,0 +1,174 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 0,
+    "pending": 0,
+    "failures": 3,
+    "start": "2025-04-13T04:51:37.919Z",
+    "end": "2025-04-13T04:51:52.535Z",
+    "duration": 14616,
+    "testsRegistered": 3,
+    "passPercent": 0,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "17aabd9e-17f2-4b3e-bc32-ccbcbceebb4c",
+      "title": "",
+      "fullFile": "cypress/e2e/flutter-based/flutter.cy.js",
+      "file": "cypress/e2e/flutter-based/flutter.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "b6662c30-3026-4dfe-8b26-9c9cddee1bd8",
+          "title": "Simple Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "74c23370-6cb8-4a6b-915b-ac66a2ff1485",
+              "title": "Login Function",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "MDM-TC-9287: valid username & password",
+                  "fullTitle": "Simple Test Case Login Function MDM-TC-9287: valid username & password",
+                  "timedOut": null,
+                  "duration": 4479,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/flutter-based/flutter.cy.js/Simple Test Case -- Login Function -- MDM-TC-9287 valid username & password (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('#username').type('dhandyjoenathan');\n// cy.get('#password').type('201017Dj*#*#')\n// cy.get('.kt-login__actions > .kt-form').click()\n// cy.get('.kt-header__topbar-wrapper > .kt-hidden-').click()\n// cy.get('.kt-notification__custom > .btn').click()\n// cy.get('.swal2-confirm').click()\n// cy.get('.kt-login__title').should('have.text', 'LOGIN')",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.\n    at Context.eval (webpack://poc-cypress-web/./cypress/e2e/flutter-based/flutter.cy.js:10:15)",
+                    "diff": null
+                  },
+                  "uuid": "a55fd0e8-eaca-4758-956f-6aaa5480e838",
+                  "parentUUID": "74c23370-6cb8-4a6b-915b-ac66a2ff1485",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "invalid username & password",
+                  "fullTitle": "Simple Test Case Login Function invalid username & password",
+                  "timedOut": null,
+                  "duration": 4406,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/flutter-based/flutter.cy.js/Simple Test Case -- Login Function -- invalid username & password (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('#username').type('qweqwe');\ncy.get('#password').type('qweqwe');\ncy.get('.kt-login__actions > .kt-form').click();\ncy.get('.alert-text').should('be.visible').should('have.text', 'Mohon masukan Password yang sesuai (Minimal 8 karakter)');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `#username`, but never found it.\n    at Context.eval (webpack://poc-cypress-web/./cypress/e2e/flutter-based/flutter.cy.js:22:15)",
+                    "diff": null
+                  },
+                  "uuid": "eaacd2ab-1a5a-494d-b19d-e0dd0e99b15d",
+                  "parentUUID": "74c23370-6cb8-4a6b-915b-ac66a2ff1485",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "username & password is null",
+                  "fullTitle": "Simple Test Case Login Function username & password is null",
+                  "timedOut": null,
+                  "duration": 4315,
+                  "state": "failed",
+                  "speed": null,
+                  "pass": false,
+                  "fail": true,
+                  "pending": false,
+                  "context": "{\n  \"title\": \"cypress-mochawesome-reporter-screenshots\",\n  \"value\": [\n    [\n      \"/flutter-based/flutter.cy.js/Simple Test Case -- Login Function -- username & password is null (failed).png\"\n    ]\n  ]\n}",
+                  "code": "cy.get('.kt-login__actions > .kt-form').click();\ncy.get(':nth-child(2) > .alert-text').should('be.visible').should('have.text', 'Password tidak boleh kosong');\ncy.get(':nth-child(3) > .alert-text').should('be.visible').should('have.text', 'Username tidak boleh kosong');",
+                  "err": {
+                    "message": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.kt-login__actions > .kt-form`, but never found it.",
+                    "estack": "AssertionError: Timed out retrying after 4000ms: Expected to find element: `.kt-login__actions > .kt-form`, but never found it.\n    at Context.eval (webpack://poc-cypress-web/./cypress/e2e/flutter-based/flutter.cy.js:32:15)",
+                    "diff": null
+                  },
+                  "uuid": "fb26e351-028e-43bf-a2af-568fc7707ff6",
+                  "parentUUID": "74c23370-6cb8-4a6b-915b-ac66a2ff1485",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [],
+              "failures": [
+                "a55fd0e8-eaca-4758-956f-6aaa5480e838",
+                "eaacd2ab-1a5a-494d-b19d-e0dd0e99b15d",
+                "fb26e351-028e-43bf-a2af-568fc7707ff6"
+              ],
+              "pending": [],
+              "skipped": [],
+              "duration": 13200,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}

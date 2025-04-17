@@ -2,14 +2,14 @@
 
 describe('Simple Test Case', () => {
     beforeEach(() => {
-        cy.visit('https://staging-sally.kbfinansia.com/auth/login')
+        cy.visit('https://staging-deasy.kbfinansia.com/login')
     })
 
     context('Login Function', () => {
         it('MDM-TC-9287: valid username & password', () => {
             cy.get('#username').type('dhandyjoenathan')
-            cy.get('#password').type('201017Dj*#*#')
-            cy.get('.kt-login__actions > .kt-form').click()
+            // cy.get('#password').type('201017Dj*#*#')
+            // cy.get('.kt-login__actions > .kt-form').click()
 
             // cy.get('.kt-header__topbar-wrapper > .kt-hidden-').click()
             // cy.get('.kt-notification__custom > .btn').click()

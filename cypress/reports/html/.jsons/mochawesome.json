@@ -1,0 +1,162 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 3,
+    "passes": 3,
+    "pending": 0,
+    "failures": 0,
+    "start": "2025-04-11T08:26:32.015Z",
+    "end": "2025-04-11T08:26:42.072Z",
+    "duration": 10057,
+    "testsRegistered": 3,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "49376f3b-35fb-43f3-a127-85c950f0bc35",
+      "title": "",
+      "fullFile": "cypress/e2e/simple/simple.cy.js",
+      "file": "cypress/e2e/simple/simple.cy.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "556d369e-ce63-4c9f-97ab-f0c6df98477c",
+          "title": "Simple Test Case",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [],
+          "suites": [
+            {
+              "uuid": "b5b19e3c-aad8-438f-9290-5845daa43d01",
+              "title": "Login Function",
+              "fullFile": "",
+              "file": "",
+              "beforeHooks": [],
+              "afterHooks": [],
+              "tests": [
+                {
+                  "title": "MDM-TC-9287: valid username & password",
+                  "fullTitle": "Simple Test Case Login Function MDM-TC-9287: valid username & password",
+                  "timedOut": null,
+                  "duration": 6627,
+                  "state": "passed",
+                  "speed": "medium",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#username').type('dhandyjoenathan');\ncy.get('#password').type('201017Dj*#*#');\ncy.get('.kt-login__actions > .kt-form').click();\n// cy.get('.kt-header__topbar-wrapper > .kt-hidden-').click()\n// cy.get('.kt-notification__custom > .btn').click()\n// cy.get('.swal2-confirm').click()\n// cy.get('.kt-login__title').should('have.text', 'LOGIN')",
+                  "err": {},
+                  "uuid": "e6ad0c86-cdc8-49a9-83ba-dac70f3b86ac",
+                  "parentUUID": "b5b19e3c-aad8-438f-9290-5845daa43d01",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "invalid username & password",
+                  "fullTitle": "Simple Test Case Login Function invalid username & password",
+                  "timedOut": null,
+                  "duration": 1455,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('#username').type('qweqwe');\ncy.get('#password').type('qweqwe');\ncy.get('.kt-login__actions > .kt-form').click();\ncy.get('.alert-text').should('be.visible').should('have.text', 'Mohon masukan Password yang sesuai (Minimal 8 karakter)');",
+                  "err": {},
+                  "uuid": "e74854ae-c11a-4782-8260-5e2ca4f53342",
+                  "parentUUID": "b5b19e3c-aad8-438f-9290-5845daa43d01",
+                  "isHook": false,
+                  "skipped": false
+                },
+                {
+                  "title": "username & password is null",
+                  "fullTitle": "Simple Test Case Login Function username & password is null",
+                  "timedOut": null,
+                  "duration": 428,
+                  "state": "passed",
+                  "speed": "fast",
+                  "pass": true,
+                  "fail": false,
+                  "pending": false,
+                  "context": null,
+                  "code": "cy.get('.kt-login__actions > .kt-form').click();\ncy.get(':nth-child(2) > .alert-text').should('be.visible').should('have.text', 'Password tidak boleh kosong');\ncy.get(':nth-child(3) > .alert-text').should('be.visible').should('have.text', 'Username tidak boleh kosong');",
+                  "err": {},
+                  "uuid": "b0188f1f-f8e5-4c8e-82fc-6122fe976623",
+                  "parentUUID": "b5b19e3c-aad8-438f-9290-5845daa43d01",
+                  "isHook": false,
+                  "skipped": false
+                }
+              ],
+              "suites": [],
+              "passes": [
+                "e6ad0c86-cdc8-49a9-83ba-dac70f3b86ac",
+                "e74854ae-c11a-4782-8260-5e2ca4f53342",
+                "b0188f1f-f8e5-4c8e-82fc-6122fe976623"
+              ],
+              "failures": [],
+              "pending": [],
+              "skipped": [],
+              "duration": 8510,
+              "root": false,
+              "rootEmpty": false,
+              "_timeout": 2000
+            }
+          ],
+          "passes": [],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 0,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "overwrite": false,
+        "html": false,
+        "json": true,
+        "reportDir": "cypress/reports/html/.jsons"
+      },
+      "version": "6.2.0"
+    }
+  }
+}
